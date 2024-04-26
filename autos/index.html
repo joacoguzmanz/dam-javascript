@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda de Alquiler de Autos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="car-rental">
+    <h2>Autos Disponibles para Alquilar</h2>
+    <div class="car">
+        <h3>Model S</h3>
+        <p>Fabricante: Tesla</p>
+        <p>Unidades Disponibles: <span id="tesla" class="units">4</span></p>
+        <button onclick="rentCar('Model S', '#tesla')">Alquilar</button>
+    </div>
+    <div class="car">
+        <h3>Mustang</h3>
+        <p>Fabricante: Ford</p>
+        <p>Unidades Disponibles: <span id="mustang" class="units">2</span></p>
+        <button onclick="rentCar('Mustang', '#mustang')">Alquilar</button>
+    </div>
+</div>
+
+<script src="cars.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

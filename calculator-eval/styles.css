@@ -1,0 +1,69 @@
+/* Estilo básico de la calculadora */
+.calculadora {
+    border: 2px solid #888;
+    border-radius: 10px;
+    padding: 20px;
+    width: 240px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* Estilo para la pantalla de entrada */
+input[type="text"] {
+    width: calc(100% - 20px); /* Ajusta el ancho para incluir el padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 1.5em;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Estilo común para todos los botones */
+button {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Colores específicos para botones de número */
+button:not(:last-child) {
+    background-color: #007bff;
+}
+
+/* Colores para los botones de operación */
+.teclas-operaciones button {
+    background-color: #28a745;
+}
+
+/* Estilo para el botón de igual */
+button:last-child {
+    background-color: #dc3545;
+    width: calc(100% - 20px); /* Botón de igual más ancho */
+}
+
+/* Efecto al pasar el mouse sobre los botones */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Efecto al hacer clic en los botones */
+button:active {
+    background-color: #004085;
+}
+
+/* Contenedor para los botones de números y operaciones */
+.teclas-numeros, .teclas-operaciones {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados del Formulario</title>
+</head>
+<body>
+    <h1>Resultados del Formulario</h1>
+    <p>Email: <span id="emailResult"></span></p>
+    <p>Nombre: <span id="nombreResult"></span></p>
+    <p>Apellidos: <span id="apellidosResult"></span></p>
+    <p>Fecha de Nacimiento: <span id="fechaNacimientoResult"></span></p>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('emailResult').textContent = params.get('email');
+        document.getElementById('nombreResult').textContent = params.get('nombre');
+        document.getElementById('apellidosResult').textContent = params.get('apellidos');
+        document.getElementById('fechaNacimientoResult').textContent = params.get('fechaNacimiento');
+    </script>
+</body>
+</html>

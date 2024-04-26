@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+svg {
+    position: absolute;
+    top: 50px; /* Posición inicial del SVG */
+    left: 50px; /* Posición inicial del SVG */
+}

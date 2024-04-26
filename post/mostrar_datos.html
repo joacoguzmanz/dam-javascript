@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos enviados</title>
+</head>
+<body>
+    <h1>Datos enviados</h1>
+    <div id="datos"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const datos = JSON.parse(localStorage.getItem('formData'));
+            localStorage.removeItem('formData'); // Limpia los datos después de cargarlos
+            const contenedor = document.getElementById('datos');
+            for (const propiedad in datos) {
+                const p = document.createElement('p');
+                p.textContent = `${propiedad}: ${datos[propiedad]}`;
+                contenedor.appendChild(p);
+            }
+        });
+    </script>
+</body>
+</html>

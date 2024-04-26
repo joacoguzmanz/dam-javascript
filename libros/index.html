@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="library">
+    <h2>Libros Disponibles</h2>
+    <div class="book">
+        <h3>El Principito</h3>
+        <p>Autor: Antoine de Saint-Exupéry</p>
+        <p>Copias Disponibles: <span class="copies">5</span></p>
+        <button onclick="borrowBook('El Principito')">Tomar Prestado</button>
+        <button onclick="getDetailsBook('El Principito')">Detalles</button>
+    </div>
+    <div class="book">
+        <h3>Cien Años de Soledad</h3>
+        <p>Autor: Gabriel García Márquez</p>
+        <p>Copias Disponibles: <span class="copies">3</span></p>
+        <button onclick="borrowBook('Cien Años de Soledad')">Tomar Prestado</button>
+        <button onclick="getDetailsBook('Cien Años de Soledad')">Detalles</button>
+    </div>
+    <div class="book">
+        <h3>1984</h3>
+        <p>Autor: George Orwell</p>
+        <p>Copias Disponibles: <span class="copies">2</span></p>
+        <button onclick="borrowBook('1984')">Tomar Prestado</button>
+        <button onclick="getDetailsBook('1984')">Detalles</button>
+    </div>
+    <div class="book">
+        <h3>Meditations</h3>
+        <p>Autor: Marcus Aurelius</p>
+        <p>Copias Disponibles: <span class="copies">0</span></p>
+        <button onclick="borrowBook('Meditations')">Tomar Prestado</button>
+        <button onclick="getDetailsBook('Meditations')">Detalles</button>
+    </div>
+
+    <button onclick="showStock()">Mostrar inventario</button>
+    <div id="inventario">
+    </div>
+</div>
+
+<script src="book.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
