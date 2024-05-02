@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Concesionario de Automóviles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="car-dealership">
+    <h2>Autos en Venta</h2>
+    <div class="car" data-model="Model X">
+        <h3>Model X</h3>
+        <p>Fabricante: Tesla</p>
+        <p>Precio: $80,000</p>
+        <p>Estado: <span class="status">en venta</span></p>
+        <button onclick="buyCar('Model X')">Comprar</button>
+        <button onclick="sendCarForRepair('Model X')">Reparar</button>
+    </div>
+
+    <div class="car" data-model="Civic">
+        <h3>Civic</h3>
+        <p>Fabricante: Honda</p>
+        <p>Precio: $25,000</p>
+        <p>Estado: <span class="status">en venta</span></p>
+        <button onclick="buyCar('Civic')">Comprar</button>
+        <button onclick="sendCarForRepair('Civic')">Reparar</button>
+    </div>
+
+    <h2>Autos en Reparación</h2>
+    <div id="repair-shop"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
