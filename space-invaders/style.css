@@ -1,0 +1,57 @@
+.grid {
+    width: 300px;
+    height: 300px;
+    border: solid black 1px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+
+.invader::before {
+    background-image: url('alien.png');
+    background-size: 20px 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content:"";
+    /* Center the image */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shooter::before {
+    background-image: url('ship.png');
+    background-size: 50px 50px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    content:"";
+    /* Center the image */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.laser::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 15px;
+    background-color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.boom {
+    background-color: red!important;
+}
