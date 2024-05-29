@@ -1,0 +1,43 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      Chat App
+    </header>
+    <ul id="messages"></ul>
+    <form id="form" action="">
+      <input id="input" autocomplete="off" /><button>Send</button>
+    </form>
+  </div>
+
+  <!-- Importamos Socket.IO -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    // Conectamos al servidor Socket.IO
+    var socket = io();
+
+    // Manejamos el evento 'chat message' del servidor
+    socket.on('chat message', function(msg){
+      var item = document.createElement('li');
+      item.textContent = msg;
+      document.getElementById('messages').appendChild(item);
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+
+    // Enviamos el mensaje al servidor
+    document.getElementById('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var input = document.getElementById('input');
+      socket.emit('chat message', input.value);
+      input.value = '';
+    });
+  </script>
+</body>
+</html>
