@@ -17,11 +17,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Manejamos el evento de conexión de Socket.IO
 io.on('connection', (socket) => {
-  console.log('Un usuario se ha conectado');
+  const ipAddress = socket.handshake.address;
+  console.log('Un usuario se ha conectado: ' + ipAddress);
 
   // Manejamos el evento 'chat message'
   socket.on('chat message', (msg) => {
-    console.log('Mensaje: ' + msg);
+    console.log('Mensaje: ' + msg + ' - IP: ' + ipAddress);
     io.emit('chat message', msg);
   });
 

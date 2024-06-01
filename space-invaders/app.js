@@ -96,7 +96,8 @@ function moveInvaders() {
     }
 }
 
-invadersId = setInterval(moveInvaders, 600)
+let pace = 600;
+invadersId = setInterval(moveInvaders, pace);
 
 function shoot(e) {
     let laserId
@@ -118,6 +119,9 @@ function shoot(e) {
             const alienRemoved = alienInvaders.indexOf(currentLaserIndex)
             aliensRemoved.push(alienRemoved)
             results++
+            clearInterval(invadersId)
+            pace -= 20
+            invadersId = setInterval(moveInvaders, pace)
             resultDisplay.innerHTML = results
         }
     }
