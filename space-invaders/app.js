@@ -133,7 +133,6 @@ function shoot(e) {
 
 document.addEventListener('keydown', shoot)
 
-// Add this function to reset the game state
 function resetGame() {
     squares.forEach(square => square.classList.remove("invader", "shooter", "laser", "boom"));
 
@@ -153,7 +152,6 @@ function resetGame() {
     invadersId = setInterval(moveInvaders, pace);
 }
 
-// Add this event listener to handle the 'y' key press
 document.addEventListener("keydown", (e) => {
     if ((squares[currentShooterIndex].classList.contains("invader") || aliensRemoved.length === alienInvaders.length) && e.key === 'y') {
         resetGame();
